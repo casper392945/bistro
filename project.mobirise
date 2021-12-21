@@ -1,0 +1,232 @@
+{
+  "settings": {
+    "name": "BistroM5",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "bistrom5",
+      "title": "BistroM5",
+      "styling": {
+        "primaryColor": "#202020",
+        "secondaryColor": "#555555",
+        "successColor": "#405d5d",
+        "infoColor": "#bbd5e4",
+        "warningColor": "#e3ba52",
+        "dangerColor": "#e5673b",
+        "mainFont": "Brygada 1918",
+        "display1Font": "Brygada 1918",
+        "display1Size": 4.375,
+        "display2Font": "Brygada 1918",
+        "display2Size": 3.125,
+        "display5Font": "Brygada 1918",
+        "display5Size": 2.0625,
+        "display7Font": "Brygada 1918",
+        "display7Size": 1.5625,
+        "display4Font": "Urbanist",
+        "display4Size": 1,
+        "isRoundedButtons": false,
+        "isGhostButtonBorder": false,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.5.6",
+    "siteFonts": [
+      {
+        "css": "'Brygada 1918', serif",
+        "name": "Brygada 1918",
+        "url": "https://fonts.googleapis.com/css?family=Brygada+1918:400,500,600,700,400i,500i,600i,700i"
+      },
+      {
+        "css": "'Urbanist', sans-serif",
+        "name": "Urbanist",
+        "url": "https://fonts.googleapis.com/css?family=Urbanist:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "imageResize": true,
+    "uniqCompNum": 1,
+    "versionPublish": "5.5.6",
+    "screenshot": "screenshot.png",
+    "chatbutton": {},
+    "favicon": false,
+    "mbrsiteDomain": "h6tgmcvyxe",
+    "cssOptimize": false,
+    "lazyLoad": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "pwa-switcher": false
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Bistro",
+        "meta_descr": "Bistro",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "meta_image": "@PROJECT_PATH@/assets/images/bistro8.jpg"
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)",
+              ".carousel": {
+                "@media (min-width: 768px)": {
+                  "height": "(@sliderHeight * 100px)"
+                },
+                "@media (max-width: 767px)": {
+                  "height": "80vh"
+                },
+                "img": {
+                  "width": "100%",
+                  "height": "100%",
+                  "object-fit": "cover"
+                }
+              },
+              ".carousel-item, .carousel-inner": {
+                "height": "100%"
+              }
+            },
+            "& when (@fullScreen)": {
+              "padding-top": "0",
+              "padding-bottom": "0",
+              ".carousel": {
+                "width": "100%"
+              },
+              ".carousel-inner": {
+                "display": "flex",
+                "align-content": "center",
+                "align-items": "center"
+              },
+              ".carousel-item img": {
+                "height": "100vh",
+                "object-fit": "cover"
+              }
+            },
+            ".carousel-caption": {
+              "top": "50%",
+              "transform": "translateY(-50%)"
+            },
+            ".mbr-section-btn": {
+              "margin-top": "25px",
+              "margin-bottom": "34px",
+              "@media (max-width: 767px)": {
+                ".btn": {
+                  "padding": "1rem 2rem"
+                }
+              }
+            },
+            ".mobi-mbri-arrow-next": {
+              "margin-left": "5px"
+            },
+            ".mobi-mbri-arrow-prev": {
+              "margin-right": "5px"
+            },
+            ".carousel-control:hover": {
+              "&.carousel-control-prev .mobi-mbri": {
+                "transform": "translateX(3px)"
+              },
+              "&.carousel-control-next .mobi-mbri": {
+                "transform": "translateX(-3px)"
+              }
+            },
+            ".item-wrapper": {
+              "width": "100%"
+            },
+            "@media (max-width: 767px)": {
+              ".container .carousel-control": {
+                "margin-bottom": "0"
+              },
+              ".content-slider-wrap": {
+                "width": "100% !important"
+              }
+            },
+            ".container .carousel-indicators": {
+              "margin-bottom": "3px"
+            },
+            ".carousel-control": {
+              "top": "50%",
+              "width": "92px",
+              "height": "92px",
+              "margin-top": "-1.5rem",
+              "font-size": "21px",
+              "border-radius": "50%",
+              "color": "#202020",
+              "background-color": "@controlsColor",
+              "border": "1px solid @controlsColor",
+              "transition": "all 0.2s ease-out",
+              "opacity": "1",
+              "&.carousel-control-prev": {
+                "left": "0",
+                "margin-left": "-2.5rem"
+              },
+              "&.carousel-control-next": {
+                "right": "0",
+                "margin-right": "-2.5rem"
+              },
+              ".mobi-mbri": {
+                "transition": "all 0.2s ease-out"
+              },
+              "@media (max-width: 768px)": {
+                "display": "none !important"
+              }
+            },
+            ".carousel-indicators": {
+              "position": "absolute",
+              "bottom": "0",
+              "margin-bottom": "2rem !important",
+              "align-items": "center",
+              "li": {
+                "max-width": "10px",
+                "max-height": "10px",
+                "height": "6px",
+                "width": "6px",
+                "margin": "10px",
+                "background-color": "@controlsColor",
+                "border": "none",
+                "border-radius": "50%",
+                "opacity": "1",
+                "transition": "all 0.2s ease-in-out",
+                "&.active, &:hover": {
+                  "transform": "scale(1.6)"
+                },
+                "&::after, &::before": {
+                  "content": "none"
+                }
+              },
+              "&.ie-fix": {
+                "left": "50%",
+                "display": "block",
+                "width": "60%",
+                "margin-left": "-30%",
+                "text-align": "center"
+              },
+              "@media (max-width: 768px)": {
+                "display": "none !important"
+              }
+            }
+          },
+          "_name": "slider1",
+          "_sourceTheme": "bistrom5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"slider1 bistro_slider1\" group=\"Sliders &amp; Galleries\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n    <mbr-parameters>\n        <input type=\"id\" name=\"sliderId\">\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"!fullScreen\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"!fullScreen\">\n        <input type=\"range\" title=\"Height\" name=\"sliderHeight\" min=\"3\" max=\"8\" value=\"6.5\" step=\".5\" condition=\"!fullScreen\">\n        <input type=\"range\" title=\"Width\" name=\"sliderWidth\" min=\"6\" max=\"11\" value=\"11\" step=\"1\" condition=\"!fullScreen\">\n        <header>Carousel</header>\n        <input type=\"checkbox\" title=\"Fade Effect\" name=\"fade\" checked=\"\">\n        <input type=\"checkbox\" title=\"Autoplay\" name=\"autoplay\">\n        <input type=\"range\" title=\"Interval\" name=\"interval\" min=\"3\" max=\"10\" value=\"5\" step=\"1\" condition=\"autoplay\">\n        <input type=\"checkbox\" title=\"Controls\" name=\"showControl\" checked=\"\">\n        <input type=\"checkbox\" title=\"Bullets\" name=\"showIndicators\" checked=\"\">\n        <input type=\"color\" title=\"Color\" value=\"#fef2f2\" name=\"controlsColor\" condition=\"showControl || showIndicators\">\n        <header>Slide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showCaption\" checked=\"\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked=\"\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\" selected=\"\">\n    </mbr-parameters>\n    \n    <div class=\"container-fluid\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-11 col-lg-{{sliderWidth}}\">\n                <div id=\"{{sliderId}}\" class=\"carousel slide\" mbr-class=\"{'carousel-fade': fade}\" data-ride=\"{{autoplay ? 'carousel' : false}}\" data-bs-ride=\"{{autoplay ? 'carousel' : false}}\" data-interval=\"{{interval*1000}}\" data-bs-interval=\"{{interval*1000}}\">\n                    <ol class=\"carousel-indicators\" mbr-if=\"showIndicators\">\n                        <li data-target=\"#{{sliderId}}\" data-bs-target=\"#{{sliderId}}\" data-slide-to=\"0\" data-bs-slide-to=\"0\" class=\"active\"></li>\n                        <li data-target=\"#{{sliderId}}\" data-bs-target=\"#{{sliderId}}\" data-slide-to=\"1\" data-bs-slide-to=\"1\"></li>\n                        <li data-target=\"#{{sliderId}}\" data-bs-target=\"#{{sliderId}}\" data-slide-to=\"2\" data-bs-slide-to=\"2\"></li>\n                    </ol>\n                    <div class=\"carousel-inner\">\n                        <div class=\"carousel-item slider-image item active\">\n                            <div class=\"item-wrapper\">\n                                <img class=\"d-block w-100\" src=\"../_images/img/bistro8.jpg\" data-slide-to=\"0\" data-bs-slide-to=\"0\">\n                                <div class=\"carousel-caption\" mbr-if=\"showCaption || showText || showButtons\">\n                                    <h5 class=\"mbr-section-title mbr-fonts-style\" mbr-if=\"showCaption\" mbr-theme-style=\"display-1\">START YOUR MORNING WITH COFFEE</h5>\n                                    <p class=\"mbr-section-text mb-0 mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-text,.mbr-section-btn\">Click on the image to edit slides.</p>\n                                    <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-white\" href=\"#\" data-app-placeholder=\"Type Text\">VIEW MORE</a></div>\n                                </div>\n                            </div>\n                        </div><div class=\"carousel-item slider-image item\">\n                            <div class=\"item-wrapper\">\n                                <img class=\"d-block w-100\" src=\"../_images/img/bistro6.jpg\" data-slide-to=\"1\" data-bs-slide-to=\"1\">\n                                <div class=\"carousel-caption\" mbr-if=\"showCaption || showText || showButtons\">\n                                    <h5 class=\"mbr-section-title mbr-fonts-style\" mbr-if=\"showCaption\" mbr-theme-style=\"display-1\">TREAT YOURSELF TO A SWEET TREAT</h5>\n                                    <p class=\"mbr-section-text mb-0 mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\">Click on the image to edit slides.</p>\n                                    <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-white\" href=\"#\" data-app-placeholder=\"Type Text\" style=\"\n\">VIEW MORE</a></div>\n                                </div>\n                            </div>\n                        </div>\n\n                        <div class=\"carousel-item slider-image item\">\n                            <div class=\"item-wrapper\">\n                                <img class=\"d-block w-100\" src=\"../_images/img/bistro5.jpg\" data-slide-to=\"1\" data-bs-slide-to=\"1\">\n                                <div class=\"carousel-caption\" mbr-if=\"showCaption || showText || showButtons\">\n                                    <h5 class=\"mbr-section-title mbr-fonts-style\" mbr-if=\"showCaption\" mbr-theme-style=\"display-1\">CHOOSE YOUR FAVORITE WINE</h5>\n                                    <p class=\"mbr-section-text mb-0 mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\">Click on the image to edit slides.</p>\n                                    <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-white\" href=\"#\" data-app-placeholder=\"Type Text\">VIEW MORE</a></div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <a class=\"carousel-control carousel-control-prev\" mbr-if=\"showControl\" href=\"#{{sliderId}}\" role=\"button\" data-slide=\"prev\" data-bs-slide=\"prev\">\n                        <span class=\"mobi-mbri mobi-mbri-arrow-prev\" aria-hidden=\"true\"></span>\n                        <span class=\"sr-only visually-hidden\">Previous</span>\n                    </a>\n                    <a class=\"carousel-control carousel-control-next\" mbr-if=\"showControl\" href=\"#{{sliderId}}\" role=\"button\" data-slide=\"next\" data-bs-slide=\"next\">\n                        <span class=\"mobi-mbri mobi-mbri-arrow-next\" aria-hidden=\"true\"></span>\n                        <span class=\"sr-only visually-hidden\">Next</span>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sSeNggWhr0",
+          "_anchor": "slider1-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
